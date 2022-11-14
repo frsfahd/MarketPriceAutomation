@@ -1,0 +1,708 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SBG" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="711.3333333333334,3900.6666666666665" sap2010:WorkflowViewState.IdRef="SBG_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business.Filter</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="49">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SBG" sap:VirtualizedContainerService.HintSize="690,3836" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="552,2206.6666666666665" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,2110.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="476,2020.666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="data\SBG-0122.xlsx" WorkbookPath="data\SBG-0122.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="SBG" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="442,1731.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="pivotTable" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:FilterX ClearFilter="False" ColumnName="OBJECT_YEAR" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="FilterX_12" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                      <ueab:FilterX.FilterArgument>
+                        <ueabf:FilterArgument Mode="Basic">
+                          <ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                              <ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                              </ueabf:AdvancedFilterArgument.Condition1>
+                              <ueabf:AdvancedFilterArgument.Condition2>
+                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                              </ueabf:AdvancedFilterArgument.Condition2>
+                            </ueabf:AdvancedFilterArgument>
+                          </ueabf:FilterArgument.AdvancedFiltersArgument>
+                          <ueabf:FilterArgument.BasicFiltersArgument>
+                            <ueabf:BasicFilterArgument>
+                              <ueabf:BasicFilterArgument.BasicFilters>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="12">
+                                  <InArgument x:TypeArguments="x:String">2011</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2012</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2013</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2014</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2015</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2016</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2017</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2018</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2019</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2020</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2021</InArgument>
+                                  <InArgument x:TypeArguments="x:String">2022</InArgument>
+                                </scg:List>
+                              </ueabf:BasicFilterArgument.BasicFilters>
+                            </ueabf:BasicFilterArgument>
+                          </ueabf:FilterArgument.BasicFiltersArgument>
+                        </ueabf:FilterArgument>
+                      </ueab:FilterX.FilterArgument>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:FilterX>
+                    <ueab:FilterX ClearFilter="False" ColumnName="OBJECT_GROUP" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="FilterX_11" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                      <ueab:FilterX.FilterArgument>
+                        <ueabf:FilterArgument Mode="Basic">
+                          <ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                              <ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                              </ueabf:AdvancedFilterArgument.Condition1>
+                              <ueabf:AdvancedFilterArgument.Condition2>
+                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="LT" />
+                              </ueabf:AdvancedFilterArgument.Condition2>
+                            </ueabf:AdvancedFilterArgument>
+                          </ueabf:FilterArgument.AdvancedFiltersArgument>
+                          <ueabf:FilterArgument.BasicFiltersArgument>
+                            <ueabf:BasicFilterArgument>
+                              <ueabf:BasicFilterArgument.BasicFilters>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                  <InArgument x:TypeArguments="x:String">MOTOR</InArgument>
+                                </scg:List>
+                              </ueabf:BasicFilterArgument.BasicFilters>
+                            </ueabf:BasicFilterArgument>
+                          </ueabf:FilterArgument.BasicFiltersArgument>
+                        </ueabf:FilterArgument>
+                      </ueab:FilterX.FilterArgument>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:FilterX>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;01. JABOTABEK&quot;" DisplayName="JABOTABEK Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">01. JABOTABEK</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Jabotabek-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_1" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Jabotabek&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_1" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Jabotabek-0&quot;)]" TableName="Jabo" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_2" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_3" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_4" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_5" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_6" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_7" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_1" Sheet="[SBG.Sheet(&quot;Jabotabek-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;02. JABAR&quot;" DisplayName="JABAR Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_3" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">02. JABAR</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Jabar-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_2" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Jabar&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_2" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Jabar-0&quot;)]" TableName="Jabar" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_8" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_9" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_10" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_11" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_12" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_13" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_2" Sheet="[SBG.Sheet(&quot;Jabar-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;03. JATIM&quot;" DisplayName="JATIM Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_4" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">03. JATIM</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Jatim-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_3" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Jatim&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_3" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Jatim-0&quot;)]" TableName="Jatim" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_14" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_15" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_16" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_17" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_18" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_19" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_3" Sheet="[SBG.Sheet(&quot;Jatim-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;04. JATENG&quot;" DisplayName="JATENG Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_5" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">04. JATENG</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Jateng-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_4" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Jateng&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_4" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Jateng-0&quot;)]" TableName="Jateng" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_20" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_21" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_22" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_23" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_24" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_25" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_4" Sheet="[SBG.Sheet(&quot;Jateng-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;05. KALIMANTAN&quot;" DisplayName="KALIMANTAN Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_6" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">05. KALIMANTAN</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Kalimantan-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_5" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Kalimantan&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_5" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Kalimantan-0&quot;)]" TableName="Kalimantan" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_26" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_27" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_28" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_29" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_30" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_31" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_5" Sheet="[SBG.Sheet(&quot;Kalimantan-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;06. SULAWESI&quot;" DisplayName="SULAWESI Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_7" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">06. SULAWESI</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Sulawesi-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_6" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Sulawesi&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_6" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Sulawesi-0&quot;)]" TableName="Sulawesi" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_32" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_33" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_34" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_35" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_36" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_37" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_6" Sheet="[SBG.Sheet(&quot;Sulawesi-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;07. BALI &amp; NTT/B&quot;" DisplayName="BALI &amp; NTT/B Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_8" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">07. BALI &amp; NTT/B</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Bali NTTB-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_7" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Bali NTTB&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_7" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Bali NTTB-0&quot;)]" TableName="Bali NTTB" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_38" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_39" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_40" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_41" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_42" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_43" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_7" Sheet="[SBG.Sheet(&quot;Bali NTTB-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;08. SUMBAGUT&quot;" DisplayName="SUMBAGUT Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_9" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">08. SUMBAGUT</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Sumbagut-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_8" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Sumbagut&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_8" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Sumbagut-0&quot;)]" TableName="Sumbagut" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_44" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_45" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_46" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_47" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_48" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_49" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_8" Sheet="[SBG.Sheet(&quot;Sumbagut-0&quot;)]" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="filter and create pivot table for AREA_NEW = &quot;09. SUMBAGSEL&quot;" DisplayName="SUMBAGSEL Table" sap:VirtualizedContainerService.HintSize="400,124" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:FilterX ClearFilter="False" ColumnName="AREA_NEW" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,180.66666666666666" sap2010:WorkflowViewState.IdRef="FilterX_10" Range="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                    <InArgument x:TypeArguments="x:String">09. SUMBAGSEL</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:CopyPasteRangeX DestinationRange="[SBG.Sheet(&quot;Sumbagsel-0&quot;)]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="434,227.33333333333334" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_9" PasteOptions="All" SourceRange="[SBG.Sheet(&quot;SOLD&quot;).Range(&quot;RAM_SOLD_FIX_pak_jamal&quot;)]" Transpose="False" />
+                      <ueab:CreatePivotTableXv2 DestinationRange="[SBG.Sheet(&quot;Sumbagsel&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,882" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_9" LayoutRowType="Compact" Range="[SBG.Sheet(&quot;Sumbagsel-0&quot;)]" TableName="Sumbagsel" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_MODEL_CODE" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_50" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="OBJECT_YEAR" Function="Sum" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_51" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="SOLD_PRICE" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_52" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="REKONDISI_SPAREPART" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_53" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ESTIMASI_REKONDISI_STNK" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_54" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="imp_unit" Function="Average" sap:VirtualizedContainerService.HintSize="382,95.33333333333333" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_55" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                      </ueab:CreatePivotTableXv2>
+                      <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="434,100.66666666666667" sap2010:WorkflowViewState.IdRef="DeleteSheetX_9" Sheet="[SBG.Sheet(&quot;Sumbagsel-0&quot;)]" />
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
