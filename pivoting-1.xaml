@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>818,2971.333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818,2971.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>pivoting_1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -122,7 +122,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" DisplayName="Use Excel File (MRP)" EditPassword="{x:Null}" sap:VirtualizedContainerService.HintSize="648,2508.6666666666665" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" Password="{x:Null}" ResizeWindow="None" TemplatePath="data\01. MRP UMCY JABODETABEK 1 PERIODE JULI - SEPT 2022.xlsx" UseTemplate="True" WorkbookPath="[outputWorkbook]">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File (MRP)" sap:VirtualizedContainerService.HintSize="648,2508.6666666666665" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="01. MRP UMCY JABODETABEK 1 PERIODE JULI - SEPT 2022.xlsx" UseTemplate="True" WorkbookPath="[outputWorkbook]">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
@@ -134,7 +134,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" DisplayName="Use Excel File (SBG)" EditPassword="{x:Null}" sap:VirtualizedContainerService.HintSize="572,2113.3333333333335" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" Password="{x:Null}" ResizeWindow="None" TemplatePath="data\SBG-0122.xlsx" UseTemplate="True" WorkbookPath="[SBGWorkbook]">
+                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File (SBG)" sap:VirtualizedContainerService.HintSize="572,2113.3333333333335" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="SBG-0122.xlsx" UseTemplate="True" WorkbookPath="[SBGWorkbook]">
                         <ueab:ExcelApplicationCard.Body>
                           <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                             <ActivityAction.Argument>
