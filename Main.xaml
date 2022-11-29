@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="686,458" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="686,1274" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -27,10 +27,12 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-    </sco:Collection>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="41">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -58,58 +60,162 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="442,1206" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="442,1476.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="MRPWorkbook" />
       <Variable x:TypeArguments="x:String" Name="MRPWorksheet" />
       <Variable x:TypeArguments="x:String" Name="SBGWorkbook" />
       <Variable x:TypeArguments="x:String" Name="Area" />
+      <Variable x:TypeArguments="x:String" Name="dialogInput" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign MRP File Path" sap:VirtualizedContainerService.HintSize="400,72" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[MRPWorkbook]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">data\01. MRP UMCY JABODETABEK 1 PERIODE JULI - SEPT 2022.xlsx</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap2010:Annotation.AnnotationText="assign MRP sheet name which output will be placed into" DisplayName="Assign MRP Sheet Name" sap:VirtualizedContainerService.HintSize="400,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
-      <Assign.To>
+    <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="OkCancel" Caption="First Step" ChosenButton="[dialogInput]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Pilih File MRP (excel) &quot;]" TopMost="True">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <If Condition="[dialogInput.Equals(&quot;Ok&quot;) = true]" DisplayName="Select MRP File" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SelectFile DisplayName="Browse For File MRP" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="358,150" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[MRPWorkbook]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:SelectFile>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,223.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="358,133.33333333333334" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_3" Reason="Proses dibatalkan" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="OkCancel" Caption="First Step" ChosenButton="[dialogInput]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Pilih File SBG (excel) &quot;]" TopMost="True">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <If Condition="[dialogInput.Equals(&quot;Ok&quot;) = true]" DisplayName="Select SBG File" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="If_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SelectFile DisplayName="Browse For File SBG" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="358,150" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[SBGWorkbook]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:SelectFile>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,223.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="358,133.33333333333334" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="Proses dibatalkan" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="assign MRP sheet name which output will be placed into" DisplayName="Assign MRP Sheet Name" sap:VirtualizedContainerService.HintSize="400,108" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="masukkan nama sheet output di file MRP" Title="Input Sheet Name">
+      <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[MRPWorksheet]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">MRP UMCY JABODETABEK 1</InArgument>
-      </Assign.Value>
+      </ui:InputDialog.Result>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="400,72" sap2010:WorkflowViewState.IdRef="Assign_5">
-      <Assign.To>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Assign Area Name" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="masukkan nama area (bersdasarkan AREA_NEW)" Title="Input Area">
+      <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[Area]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">01. JABOTABEK</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign DisplayName="Assign SBG File Path" sap:VirtualizedContainerService.HintSize="400,72" sap2010:WorkflowViewState.IdRef="Assign_3">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[SBGWorkbook]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">data\SBG-0122.xlsx</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Sequence sap2010:Annotation.AnnotationText="create pivot table from sheet &quot;SOLD&quot; in SBGWorkbook, and place it to sheet &quot;pivot&quot; in MRPWorkbook" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="400,291.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InputDialog>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,185.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="358,95.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[MRPWorkbook + vbNewLine + MRPWorksheet + vbNewLine + SBGWorkbook + Area]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Sequence sap2010:Annotation.AnnotationText="create pivot table from sheet &quot;SOLD&quot; in SBGWorkbook, and place it to sheet &quot;pivot&quot; in MRPWorkbook" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="400,291.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -118,16 +224,12 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="pivoting-1.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="pivoting-1.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="outputWorkbook">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="MRPworkbook" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="SBGWorkbook">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SBGWorkbook" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="outputWorkbook">[MRPworkbook]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="SBGWorkbook">[SBGWorkbook]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="calculate the attributes of MP from sheet &quot;pivot&quot; in MRPWorkbook using given rules, and write it into sheet MRPWorkSheet" DisplayName="Calculate and Write the Result" sap:VirtualizedContainerService.HintSize="400,291.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="calculate the attributes of MP from sheet &quot;pivot&quot; in MRPWorkbook using given rules, and write it into sheet MRPWorkSheet" DisplayName="Calculate and Write the Result" sap:VirtualizedContainerService.HintSize="400,291.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,12 +238,8 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="inputToMRP.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="inputToMRP.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="workbook">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="MRPWorkbook" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="worksheet">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="MRPWorksheet" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="workbook">[MRPWorkbook]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="worksheet">[MRPWorksheet]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="area" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
